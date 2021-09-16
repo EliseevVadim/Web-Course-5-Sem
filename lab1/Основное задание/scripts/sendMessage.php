@@ -26,7 +26,7 @@ $message = trim($message);
 $full_address = $address . $domain;
 $full_name = $name . $surname;
 
-if (mail("kuda@otpravit.ru", "Заявка с сайта", "ФИО:".$full_name.". E-mail: ".$full_address." Сообщение: ".$message ,"From: info@satename.ru \r\n"))
+if (mail("eliseevv02@mail.ru", "Заявка с сайта", "ФИО:".$full_name.". E-mail: ".$full_address." Сообщение: ".$message ,"From: info@satename.ru \r\n"))
 {
     echo "Сообщение успешно отправлено";
 }
