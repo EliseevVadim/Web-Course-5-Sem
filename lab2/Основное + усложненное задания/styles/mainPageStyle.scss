@@ -107,9 +107,10 @@
         margin: 0 3px;
         padding-top: 7px;
         border-radius: 4px;
-        width: 36px;
-        height: 36px;
-        background: aqua;
+        width: inherit;
+        height: inherit;
+        background: inherit;
+        text-decoration: none;
         display: inline-block;
       }
       a:hover {
@@ -117,7 +118,7 @@
       }
     }
     .feat-item-info {
-      h4 {
+      h2 {
         font-weight: bold;
         font-size: 16px;
         margin-bottom: 5px;
@@ -134,9 +135,9 @@
       opacity: 1;
       bottom: 55px;
     }
-      .img-fluid{
-        background-color: rgba(0,0,0,.3);
-      }
+    .img-fluid{
+      background-color: rgba(0,0,0,.3);
+    }
   }
 }
 .badged-picture {
