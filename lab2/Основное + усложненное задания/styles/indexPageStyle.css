@@ -216,4 +216,17 @@
   transform: rotate(360deg) !important;
 }
 
-/*# sourceMappingURL=mainPageStyle.css.map */
+.slider-image {
+  object-fit: cover;
+}
+
+.input-group-append {
+  position: relative;
+  left: -50px;
+}
+
+.search-field {
+  padding-right: 50px;
+}
+
+/*# sourceMappingURL=indexPageStyle.css.map */

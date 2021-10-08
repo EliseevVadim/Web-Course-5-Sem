@@ -84,7 +84,6 @@
     overflow: hidden;
     border-radius: 5px;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
-
     item-img {
       position: relative;
       overflow: hidden;
@@ -210,5 +209,15 @@
   transition: 1s;
 }
 .checkout-button:active  {
-    transform: rotate(360deg) !important;
+  transform: rotate(360deg) !important;
+}
+.slider-image {
+  object-fit: cover;
+}
+.input-group-append {
+  position: relative;
+  left: -50px;
+}
+.search-field {
+  padding-right: 50px;
 }
