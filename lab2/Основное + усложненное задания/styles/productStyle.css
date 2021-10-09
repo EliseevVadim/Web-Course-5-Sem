@@ -121,6 +121,9 @@ nav a {
 .result-items .feat-item .possible-action a:hover {
   cursor: pointer;
 }
+.result-items .feat-item .feat-item-info {
+  padding: 10px;
+}
 .result-items .feat-item .feat-item-info h2 {
   font-weight: bold;
   font-size: 16px;

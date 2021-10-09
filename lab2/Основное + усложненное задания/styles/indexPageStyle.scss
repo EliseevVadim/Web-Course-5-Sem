@@ -84,7 +84,7 @@
     overflow: hidden;
     border-radius: 5px;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
-    item-img {
+    .item-img {
       position: relative;
       overflow: hidden;
     }
@@ -115,6 +115,7 @@
       }
     }
     .feat-item-info {
+      padding: 10px;
       h2 {
         font-weight: bold;
         font-size: 16px;
@@ -126,7 +127,6 @@
       }
     }
   }
-
   .feat-item:hover {
     .possible-action {
       opacity: 1;
@@ -220,4 +220,7 @@
 }
 .search-field {
   padding-right: 50px;
+}
+.test {
+  height: 60%;
 }
