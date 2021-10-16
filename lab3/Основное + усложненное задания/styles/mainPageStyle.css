@@ -1,7 +1,21 @@
-body {
-  background: lightgreen;
+* {
+  margin: 0;
+  padding: 0;
 }
-body main .sky-button {
+
+html, body {
+  background: lightgreen;
+  height: 100%;
+}
+html .wrapper, body .wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+html main, body main {
+  flex: 1 0 auto;
+}
+html main .sky-button, body main .sky-button {
   position: relative;
   top: 100px;
   width: 250px;
@@ -16,7 +30,7 @@ body main .sky-button {
   animation-delay: 9s;
   animation-fill-mode: forwards;
 }
-body main .sky-button .sun {
+html main .sky-button .sun, body main .sky-button .sun {
   background: yellow;
   position: relative;
   width: 50px;
@@ -30,7 +44,7 @@ body main .sky-button .sun {
   animation-delay: 0s, 5s;
   animation-fill-mode: forwards;
 }
-body main .sky-button .sun .moonDots {
+html main .sky-button .sun .moonDots, body main .sky-button .sun .moonDots {
   position: relative;
   width: 35px;
   height: 35px;
@@ -43,7 +57,7 @@ body main .sky-button .sun .moonDots {
   animation-delay: 5s;
   animation-fill-mode: forwards;
 }
-body main .sky-button .sun .moonDots .firstCircle {
+html main .sky-button .sun .moonDots .firstCircle, body main .sky-button .sun .moonDots .firstCircle {
   position: relative;
   width: 8px;
   height: 8px;
@@ -51,7 +65,7 @@ body main .sky-button .sun .moonDots .firstCircle {
   border: 2px solid #6b6a6a;
   background: #b4b0b1;
 }
-body main .sky-button .sun .moonDots .secondCircle {
+html main .sky-button .sun .moonDots .secondCircle, body main .sky-button .sun .moonDots .secondCircle {
   position: relative;
   width: 12px;
   height: 12px;
@@ -61,7 +75,7 @@ body main .sky-button .sun .moonDots .secondCircle {
   border: 2px solid #6b6a6a;
   background: #b4b0b1;
 }
-body main .sky-button .sun .moonDots .thirdCircle {
+html main .sky-button .sun .moonDots .thirdCircle, body main .sky-button .sun .moonDots .thirdCircle {
   position: relative;
   width: 8px;
   height: 8px;
@@ -71,7 +85,7 @@ body main .sky-button .sun .moonDots .thirdCircle {
   top: -15%;
   left: 45%;
 }
-body main .sky-button .cloud {
+html main .sky-button .cloud, body main .sky-button .cloud {
   position: relative;
   display: flex;
   border: 2px solid gray;
@@ -87,7 +101,7 @@ body main .sky-button .cloud {
   animation-fill-mode: forwards;
   animation-delay: 0s, 5s;
 }
-body main .sky-button .cloud:before {
+html main .sky-button .cloud:before, body main .sky-button .cloud:before {
   position: relative;
   content: "";
   width: 15px;
@@ -98,7 +112,7 @@ body main .sky-button .cloud:before {
   top: -52%;
   left: 20%;
 }
-body main .sky-button .cloud:after {
+html main .sky-button .cloud:after, body main .sky-button .cloud:after {
   position: relative;
   content: "";
   width: 10px;
@@ -109,7 +123,7 @@ body main .sky-button .cloud:after {
   top: -50%;
   left: 10%;
 }
-body main .sky-button .starsArea {
+html main .sky-button .starsArea, body main .sky-button .starsArea {
   position: relative;
   background: inherit;
   width: 45%;
@@ -122,15 +136,25 @@ body main .sky-button .starsArea {
   animation-delay: 7s;
   animation-fill-mode: forwards;
 }
-body main .sky-button .starsArea .star {
+html main .sky-button .starsArea .star, body main .sky-button .starsArea .star {
   position: absolute;
   width: 10px;
   height: 10px;
   background: white;
   border-radius: 50%;
 }
-body main .sky-button:hover {
+html main .sky-button:hover, body main .sky-button:hover {
   cursor: pointer;
+}
+html footer, body footer {
+  flex: 0 0 auto;
+}
+html footer nav, body footer nav {
+  display: flex;
+  justify-content: center;
+}
+html footer nav a, body footer nav a {
+  font-size: 18px;
 }
 
 @keyframes moveSun {

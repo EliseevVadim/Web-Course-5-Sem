@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background: #39fcfc;
+  height: 100%;
+}
+html .wrapper, body .wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+html main, body main {
+  flex: 1 0 auto;
+}
+html main .switcher, body main .switcher {
+  position: relative;
+  top: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  background: #81d081;
+  width: 350px;
+  height: 70px;
+}
+html main .switcher .arrow-block, body main .switcher .arrow-block {
+  padding-left: 3px;
+  opacity: 1;
+  position: relative;
+  height: 65px;
+  width: 65px;
+}
+html main .switcher .arrow-block .arrow-top, body main .switcher .arrow-block .arrow-top {
+  background: white;
+  position: absolute;
+  height: 5px;
+  top: calc(50% - 2.5px);
+  transform-origin: 0 0;
+  transform: rotate(-35deg);
+  width: 50px;
+}
+html main .switcher .arrow-block .arrow-bottom, body main .switcher .arrow-block .arrow-bottom {
+  background: white;
+  position: absolute;
+  height: 5px;
+  top: calc(50% - 2.5px);
+  transform-origin: 0 0;
+  transform: rotate(35deg);
+  width: 50px;
+}
+html main .switcher .arrow-block:not([aria-disabled]):hover, body main .switcher .arrow-block:not([aria-disabled]):hover {
+  cursor: pointer;
+}
+html main .switcher .arrow-block:not([aria-disabled]):hover .arrow-top, body main .switcher .arrow-block:not([aria-disabled]):hover .arrow-top {
+  animation-name: top-arrow-animation;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+}
+html main .switcher .arrow-block:not([aria-disabled]):hover .arrow-bottom, body main .switcher .arrow-block:not([aria-disabled]):hover .arrow-bottom {
+  animation-name: bottom-arrow-animation;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+}
+html main .switcher .content-block, body main .switcher .content-block {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 45px;
+  height: 65px;
+}
+html main .switcher .content-block span, body main .switcher .content-block span {
+  color: white;
+  position: relative;
+  top: calc(50% - 12.5px);
+  font-size: 25px;
+}
+html footer, body footer {
+  flex: 0 0 auto;
+}
+html footer nav, body footer nav {
+  display: flex;
+  justify-content: space-between;
+}
+html footer nav a, body footer nav a {
+  font-size: 18px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@keyframes top-arrow-animation {
+  from {
+    transform: rotate(-35deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes bottom-arrow-animation {
+  from {
+    transform: rotate(35deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/*# sourceMappingURL=fourthAnimationStyle.css.map */
