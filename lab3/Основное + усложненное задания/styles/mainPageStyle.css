@@ -146,6 +146,40 @@ html main .sky-button .starsArea .star, body main .sky-button .starsArea .star {
 html main .sky-button:hover, body main .sky-button:hover {
   cursor: pointer;
 }
+html main .sky-button[rel=rollBack], body main .sky-button[rel=rollBack] {
+  animation-name: buttonUpdate;
+  animation-duration: 3s;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+}
+html main .sky-button[rel=rollBack] .starsArea, body main .sky-button[rel=rollBack] .starsArea {
+  animation-name: showStars;
+  animation-delay: 3s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate-reverse;
+}
+html main .sky-button[rel=rollBack] .sun, body main .sky-button[rel=rollBack] .sun {
+  animation-name: repaintSun, moveSun;
+  animation-delay: 5s, 7s;
+  animation-duration: 2s, 5s;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+}
+html main .sky-button[rel=rollBack] .moonDots, body main .sky-button[rel=rollBack] .moonDots {
+  animation-name: showDots;
+  animation-delay: 5s;
+  animation-duration: 2s;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+}
+html main .sky-button[rel=rollBack] .cloud, body main .sky-button[rel=rollBack] .cloud {
+  animation-name: hideCloud, moveCloud;
+  animation-delay: 5s, 7s;
+  animation-duration: 2s, 5s;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+}
 html footer, body footer {
   flex: 0 0 auto;
 }

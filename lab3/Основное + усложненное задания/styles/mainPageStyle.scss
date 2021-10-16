@@ -143,6 +143,40 @@ html, body {
     .sky-button:hover {
       cursor: pointer;
     }
+    .sky-button[rel=rollBack] {
+      animation-name: buttonUpdate;
+      animation-duration: 3s;
+      animation-direction: alternate-reverse;
+      animation-fill-mode: forwards;
+      .starsArea {
+        animation-name: showStars;
+        animation-delay: 3s;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-direction: alternate-reverse;
+      }
+      .sun {
+        animation-name: repaintSun, moveSun;
+        animation-delay: 5s, 7s;
+        animation-duration: 2s, 5s;
+        animation-direction: alternate-reverse;
+        animation-fill-mode: forwards;
+      }
+      .moonDots {
+        animation-name: showDots;
+        animation-delay: 5s;
+        animation-duration: 2s;
+        animation-direction: alternate-reverse;
+        animation-fill-mode: forwards;
+      }
+      .cloud {
+        animation-name: hideCloud, moveCloud;
+        animation-delay: 5s, 7s;
+        animation-duration: 2s, 5s;
+        animation-direction: alternate-reverse;
+        animation-fill-mode: forwards;
+      }
+    }
   }
   footer {
     flex: 0 0 auto;
