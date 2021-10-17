@@ -46,17 +46,58 @@ html, body {
           width: 50px;
         }
       }
-      .arrow-block:not([aria-disabled]):hover {
+      .arrow-block[rel=common]:hover {
         cursor: pointer;
         .arrow-top {
           animation-name: top-arrow-animation;
           animation-duration: 10s;
-          animation-fill-mode: forwards;
+          animation-fill-mode: both;
+          animation-direction: alternate;
         }
         .arrow-bottom {
           animation-name: bottom-arrow-animation;
           animation-duration: 10s;
+          animation-fill-mode: both;
+          animation-direction: alternate;
+        }
+      }
+      .arrow-block[rel=disabled] {
+        animation-name: disable-arrow-block;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        .arrow-top {
+          animation-name: top-arrow-animation;
+          animation-duration: 1s;
           animation-fill-mode: forwards;
+        }
+        .arrow-bottom {
+          animation-name: bottom-arrow-animation;
+          animation-duration: 1s;
+          animation-fill-mode: forwards;
+        }
+      }
+      .arrow-block[rel=enabled] {
+        animation-name: enable-arrow-block;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        .arrow-top {
+          animation-name: open-top-arrow-animation;
+          animation-duration: 1s;
+          animation-fill-mode: forwards;
+        }
+        .arrow-bottom {
+          animation-name: open-bottom-arrow-animation;
+          animation-duration: 1s;
+          animation-fill-mode: forwards;
+        }
+      }
+      .arrow-block[rel=initial] {
+        opacity: 0.5;
+        .arrow-top {
+          transform: rotate(0deg);
+        }
+        .arrow-bottom {
+          transform: rotate(0deg);
         }
       }
       .content-block {
@@ -103,3 +144,35 @@ html, body {
     transform: rotate(0deg);
   }
 }
+@keyframes disable-arrow-block {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+@keyframes enable-arrow-block {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes open-top-arrow-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-35deg);
+  }
+}
+@keyframes open-bottom-arrow-animation {
+   from {
+     transform: rotate(0deg);
+   }
+   to {
+     transform: rotate(35deg);
+   }
+ }

@@ -50,18 +50,59 @@ html main .switcher .arrow-block .arrow-bottom, body main .switcher .arrow-block
   transform: rotate(35deg);
   width: 50px;
 }
-html main .switcher .arrow-block:not([aria-disabled]):hover, body main .switcher .arrow-block:not([aria-disabled]):hover {
+html main .switcher .arrow-block[rel=common]:hover, body main .switcher .arrow-block[rel=common]:hover {
   cursor: pointer;
 }
-html main .switcher .arrow-block:not([aria-disabled]):hover .arrow-top, body main .switcher .arrow-block:not([aria-disabled]):hover .arrow-top {
+html main .switcher .arrow-block[rel=common]:hover .arrow-top, body main .switcher .arrow-block[rel=common]:hover .arrow-top {
   animation-name: top-arrow-animation;
   animation-duration: 10s;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
+  animation-direction: alternate;
 }
-html main .switcher .arrow-block:not([aria-disabled]):hover .arrow-bottom, body main .switcher .arrow-block:not([aria-disabled]):hover .arrow-bottom {
+html main .switcher .arrow-block[rel=common]:hover .arrow-bottom, body main .switcher .arrow-block[rel=common]:hover .arrow-bottom {
   animation-name: bottom-arrow-animation;
   animation-duration: 10s;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+}
+html main .switcher .arrow-block[rel=disabled], body main .switcher .arrow-block[rel=disabled] {
+  animation-name: disable-arrow-block;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
+}
+html main .switcher .arrow-block[rel=disabled] .arrow-top, body main .switcher .arrow-block[rel=disabled] .arrow-top {
+  animation-name: top-arrow-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+html main .switcher .arrow-block[rel=disabled] .arrow-bottom, body main .switcher .arrow-block[rel=disabled] .arrow-bottom {
+  animation-name: bottom-arrow-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+html main .switcher .arrow-block[rel=enabled], body main .switcher .arrow-block[rel=enabled] {
+  animation-name: enable-arrow-block;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+html main .switcher .arrow-block[rel=enabled] .arrow-top, body main .switcher .arrow-block[rel=enabled] .arrow-top {
+  animation-name: open-top-arrow-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+html main .switcher .arrow-block[rel=enabled] .arrow-bottom, body main .switcher .arrow-block[rel=enabled] .arrow-bottom {
+  animation-name: open-bottom-arrow-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+html main .switcher .arrow-block[rel=initial], body main .switcher .arrow-block[rel=initial] {
+  opacity: 0.5;
+}
+html main .switcher .arrow-block[rel=initial] .arrow-top, body main .switcher .arrow-block[rel=initial] .arrow-top {
+  transform: rotate(0deg);
+}
+html main .switcher .arrow-block[rel=initial] .arrow-bottom, body main .switcher .arrow-block[rel=initial] .arrow-bottom {
+  transform: rotate(0deg);
 }
 html main .switcher .content-block, body main .switcher .content-block {
   display: flex;
@@ -103,6 +144,38 @@ html footer nav a, body footer nav a {
   }
   to {
     transform: rotate(0deg);
+  }
+}
+@keyframes disable-arrow-block {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+@keyframes enable-arrow-block {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes open-top-arrow-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-35deg);
+  }
+}
+@keyframes open-bottom-arrow-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(35deg);
   }
 }
 
