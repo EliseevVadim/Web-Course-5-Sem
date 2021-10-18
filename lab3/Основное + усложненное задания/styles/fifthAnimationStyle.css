@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background: bisque;
+  height: 100%;
+}
+html .wrapper, body .wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+html .wrapper main, body .wrapper main {
+  flex: 1 0 auto;
+}
+html .wrapper main .circle-area, body .wrapper main .circle-area {
+  position: relative;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  background: white;
+  width: 350px;
+  height: 160px;
+  margin: 0 auto;
+}
+html .wrapper main .circle-area .circle, body .wrapper main .circle-area .circle {
+  width: 35px;
+  height: 35px;
+  background: #391e99;
+  background: linear-gradient(97deg, blue 40%, red 55%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  top: calc(50% - 20px);
+  border-radius: 50%;
+}
+html .wrapper footer, body .wrapper footer {
+  flex: 0 0 auto;
+}
+html .wrapper footer nav, body .wrapper footer nav {
+  display: flex;
+  justify-content: space-between;
+}
+html .wrapper footer nav a, body .wrapper footer nav a {
+  font-size: 18px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*# sourceMappingURL=fifthAnimationStyle.css.map */
