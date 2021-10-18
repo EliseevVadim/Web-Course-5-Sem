@@ -32,6 +32,20 @@ html, body {
           top: calc(50% - 20px);
           border-radius: 50%;
         }
+        .circle#leftCircle, .circle#rightCircle {
+          transform-origin: top center;
+        }
+        .circle#leftCircle[rel=running] {
+          animation-name: left-ball-animation;
+          animation-direction: alternate;
+          animation-duration: 16s;
+        }
+        .circle#rightCircle[rel=running] {
+          animation-name: right-ball-animation;
+          animation-delay: 2s;
+          animation-direction: alternate;
+          animation-duration: 16s;
+        }
       }
     }
     footer {
@@ -46,5 +60,87 @@ html, body {
         }
       }
     }
+  }
+}
+@keyframes left-ball-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  6.25% {
+    transform: rotate(120deg);
+  }
+  12.5% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  31.25% {
+    transform: rotate(90deg);
+  }
+  37.5% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  56.25% {
+    transform: rotate(60deg);
+  }
+  62.5% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  81.25% {
+    transform: rotate(30deg);
+  }
+  87.5% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes right-ball-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  6.25% {
+    transform: rotate(-120deg);
+  }
+  12.5% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  31.25% {
+    transform: rotate(-90deg);
+  }
+  37.5% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  56.25% {
+    transform: rotate(-60deg);
+  }
+  62.5% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  81.25% {
+    transform: rotate(-30deg);
+  }
+  87.5% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
