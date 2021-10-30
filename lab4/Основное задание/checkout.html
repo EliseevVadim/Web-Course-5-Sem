@@ -5,12 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=6.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Страница с описанием отдельной услуги">
+    <meta name="description" content="Страница оформления заказа">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles/singlePageStyle.css">
-    <title>Страница выбора отдельной услуги</title>
+    <link rel="stylesheet" href="styles/checkoutPageStyle.css">
+    <title>Оформление заказа</title>
 </head>
 <body>
     <header>
@@ -115,191 +115,160 @@
                 </div>
             </div>
         </section>
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="slide-container d-flex w-100 justify-content-center">
-                        <img src="images/painting-for-sp.avif" class="d-block" alt="...">
-                    </div>
+        <section class="billing-area" role="tablist" aria-multiselectable="true">
+            <div class="card">
+                <div class="card-header" role="tab" id="partOne">
+                    <h1 class="card-title">
+                        <a data-bs-toggle="collapse" data-parent="#billing-area" href="#detailsOne"
+                           aria-expanded="true" aria-controls="detailsOne">
+                            01. Подготовка к оформлению заказа
+                        </a>
+                    </h1>
                 </div>
-                <div class="carousel-item">
-                    <div class="slide-container d-flex w-100 justify-content-center">
-                        <img src="images/tuning-for-sp.avif" class="d-bloc" alt="...">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="slide-container d-flex w-100 justify-content-center">
-                        <img src="images/for-sp-3.avif" class="d-block" alt="...">
+                <div id="detailsOne" class="collapse show" role="tabpanel" aria-labelledby="partOne">
+                    <div class="card-body">
+                        <div class="row d-flex justify-content-end">
+                            <div class="col-md-5 pb-4">
+                                <div class="col-md-6">
+                                    <div class="pb-4">
+                                        <h2>Проверить заказ в качестве гостя или зарегистрироваться</h2>
+                                        <span>Зарегистрируйтесь для будущего сотрудничества</span>
+                                    </div>
+                                    <div class="choices pb-4">
+                                        <div class="form-check">
+                                            <input
+                                                    class="form-check-input"
+                                                    type="radio"
+                                                    name="flexRadioDefault"
+                                                    id="guest-choice"
+                                            />
+                                            <label class="form-check-label" for="guest-choice">
+                                                Продолжить в качестве гостя
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input
+                                                    class="form-check-input"
+                                                    type="radio"
+                                                    name="flexRadioDefault"
+                                                    id="register-choice"
+                                                    checked
+                                            />
+                                            <label class="form-check-label" for="register-choice">
+                                                Зарегистрироваться
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pb-4">
+                                    <h2>Зарегистрируйтесь и сэкономьте время</h2>
+                                    <span>Зарегистрируйтесь для будущего сотрудничества</span>
+                                </div>
+                                <div class="pb-4">
+                                    <div class="d-flex">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                                            <path d="M13.485 1.431a1.473 1.473 0 0 1 2.104 2.062l-7.84 9.801a1.473 1.473 0 0 1-2.12.04L.431 8.138a1.473 1.473 0 0 1 2.084-2.083l4.111 4.112 6.82-8.69a.486.486 0 0 1 .04-.045z"/>
+                                        </svg>
+                                        <span>Быстрое и простое подтверждение</span>
+                                    </div>
+                                    <div class="d-flex">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                                            <path d="M13.485 1.431a1.473 1.473 0 0 1 2.104 2.062l-7.84 9.801a1.473 1.473 0 0 1-2.12.04L.431 8.138a1.473 1.473 0 0 1 2.084-2.083l4.111 4.112 6.82-8.69a.486.486 0 0 1 .04-.045z"/>
+                                        </svg>
+                                        <span>Моментальный доступ и истории заказов</span>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-outline-success">
+                                    Продолжить
+                                </button>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="col-md-6">
+                                    <div class="pb-4">
+                                        <h2>Уже зарегистрированы?</h2>
+                                        <span>Войдите в свой аккаунт ниже</span>
+                                    </div>
+                                    <form action="">
+                                        <h3>Электронная почта<sup>*</sup></h3>
+                                        <input type="email" class="form-control"
+                                               placeholder="Введите e-mail..." required>
+                                        <h3 class="pt-3">Пароль<sup>*</sup></h3>
+                                        <input type="password" class="form-control"
+                                               placeholder="Введите свой пароль..." required>
+                                        <p class="text-danger pt-2"><sup>*</sup>Обязательные поля</p>
+                                        <div class="d-flex pb-4">
+                                            <button type="submit" class="btn btn-outline-success">
+                                                Войти
+                                            </button>
+                                            <button type="button" class="btn btn-outline-light">
+                                                <span>Забыли пароль?</span>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Предыдущий</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Следующий</span>
-            </button>
-        </div>
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-6 service-info">
-                    <div class="pb-5">
-                        <h1 class="text-danger">Тюнинг авто</h1>
-                        <h2>Покраска автомобиля</h2>
-                    </div>
-                    <p class="pb-1">Успейте заказать полную покраску автомобиля по очень выгодной цене. Сделайте заказ
-                    до конца этой недели и получите скидку в размере 30%. Ниже вы можете выбрать цвет, которым
-                    хотите покрасить свой автомобиль, закрашиваемую область, примерное время покраски
-                    (в днях).</p>
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-md-6">
-                            <span class="text-secondary">Вид услуги:
-                                <strong>VIP</strong>
-                            </span>
-                        </div>
-                        <div class="col-md-6">
-                            <span class="text-secondary">Скидка:
-                                <strong>30%</strong>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="text-danger pt-4 price">
-                        15 000 ₽
+            <div class="card">
+                <div class="card-header" role="tab" id="partTwo">
+                    <h1 class="card-title">
+                        <a class="collapsed" data-bs-toggle="collapse" data-parent="#faq" href="#detailsTwo"
+                           aria-expanded="false" aria-controls="detailsTwo">
+                            02. Платежная информация
+                        </a>
+                    </h1>
+                </div>
+                <div id="detailsTwo" class="collapse" role="tabpanel" aria-labelledby="partTwo">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet.
                     </div>
                 </div>
             </div>
-            <hr>
-            <form action="#" class="pb-3">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-md-8">
-                        <div class="row d-flex justify-content-center">
-                            <div class="col-md-4 d-block pb-3" style="text-align: center">
-                                <div class="labelled-control">
-                                    <span>Выберите цвет</span>
-                                    <select name="colors" class="form-select">
-                                        <option selected>Красный</option>
-                                        <option value="1">Черный</option>
-                                        <option value="2">Желтый</option>
-                                        <option value="3">Зеленый</option>
-                                        <option value="4">Синий</option>
-                                        <option value="5">Белый</option>
-                                        <option value="6">Другое</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-4 d-block pb-3" style="text-align: center">
-                                <div class="labelled-control">
-                                    <span>Выберите закрашиваемую область</span>
-                                    <select name="area" class="form-select">
-                                        <option selected>Полная покраска</option>
-                                        <option value="1">Только задняя часть</option>
-                                        <option value="2">Бампер</option>
-                                        <option value="3">Покраска дверей</option>
-                                        <option value="4">Другое</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-4 d-block pb-3" style="text-align: center">
-                                <div class="labelled-control">
-                                    <span>Введите время работы</span>
-                                    <input type="number" class="form-control" placeholder="Дни на работу">
-                                </div>
-                            </div>
-                            <button class="btn btn-outline-danger" type="button" onclick="window.location.href='checkout.html'">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                                </svg>
-                                Добавить в заказ
-                            </button>
-                        </div>
+            <div class="card">
+                <div class="card-header" role="tab" id="partThree">
+                    <h1 class="card-title">
+                        <a class="collapsed" data-bs-toggle="collapse" data-parent="#billing-area"
+                           href="#detailsThree" aria-expanded="true" aria-controls="detailsThree">
+                            03. Информация о предоставлении услуги
+                        </a>
+                    </h1>
+                </div>
+                <div id="detailsThree" class="collapse in" role="tabpanel" aria-labelledby="partThree">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore labore
+                        laboriosam sequi velit voluptas?
                     </div>
                 </div>
-            </form>
-            <hr>
-        </div>
-        <section id="feature-items" class="feat-items">
-            <div class="container text-center pt-3">
-                <div class="section-title">
-                    <h2 class="pb-3">Вас также может заинтересовать</h2>
+            </div>
+            <div class="card">
+                <div class="card-header" role="tab" id="partFour">
+                    <h1 class="card-title">
+                        <a class="collapsed" data-bs-toggle="collapse" data-parent="#billing-area"
+                           href="#detailsFour" aria-expanded="true" aria-controls="detailsFour">
+                            04. Способ оплаты
+                        </a>
+                    </h1>
                 </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                        <div class="feat-item">
-                            <div class="item-img">
-                                <img class="img-fluid" src="images/ustanovka_obvesov_tuning.avif" alt="engine fix">
-                                <div class="possible-action">
-                                    <a href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                                        </svg>
-                                        Добавить в заказ
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="feat-item-info">
-                                <h2>Установка и подгонка обвеса</h2>
-                                <span>2 000 ₽</span>
-                            </div>
-                        </div>
+                <div id="detailsFour" class="collapse in" role="tabpanel" aria-labelledby="partFour">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, reprehenderit.
                     </div>
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                        <div class="feat-item">
-                            <div class="item-img">
-                                <img class="img-fluid" src="images/painting.avif" alt="paint">
-                                <div class="possible-action">
-                                    <a href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                                        </svg>
-                                        Добавить в заказ
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="feat-item-info">
-                                <h2>Покраска авто</h2>
-                                <span>Договорная</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                        <div class="feat-item">
-                            <div class="item-img">
-                                <img class="img-fluid" src="images/s3-sp.avif" alt="check radiator">
-                                <div class="possible-action">
-                                    <a href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                                        </svg>
-                                        Добавить в заказ
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="feat-item-info">
-                                <h2>Установка брызговиков на авто</h2>
-                                <span>1 500 ₽</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                        <div class="feat-item">
-                            <div class="item-img">
-                                <img class="img-fluid" src="images/s2-sp.avif" alt="check conditioner">
-                                <div class="possible-action">
-                                    <a href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                                        </svg>
-                                        Добавить в заказ
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="feat-item-info">
-                                <h2>Антихром для авто</h2>
-                                <span>2 000 ₽</span>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" role="tab" id="partFive">
+                    <h1 class="card-title">
+                        <a class="collapsed" data-bs-toggle="collapse" data-parent="#billing-area"
+                           href="#detailsFive" aria-expanded="true" aria-controls="detailsFive">
+                            05. Проверка заявки
+                        </a>
+                    </h1>
+                </div>
+                <div id="detailsFive" class="collapse in" role="tabpanel" aria-labelledby="partFive">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, suscipit?
                     </div>
                 </div>
             </div>
@@ -380,7 +349,7 @@
                         <p><a href="#" class="text-reset">Политика конфиденциальности</a></p>
                         <p><a href="#" class="text-reset">Как заказать услугу</a></p>
                         <p><a href="#" class="text-reset">Программы лояльности</a></p>
-                        <p><a href="#" class="text-reset">Специальные предложения</a></p>
+                        <p><a href="../Усложненное%20задание/newsletter.html" class="text-reset">Специальные предложения</a></p>
                     </div>
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                         <h6 class="text-uppercase text-danger fw-bold mb-4">
