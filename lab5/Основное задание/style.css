@@ -1,0 +1,67 @@
+.my-slider {
+  position: relative;
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  height: 60vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.my-slider #left-arrow svg, .my-slider #right-arrow svg {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+.my-slider .slider-content {
+  width: 80%;
+  display: flex;
+  list-style-type: none;
+  overflow: hidden;
+}
+.my-slider .slider-content .slider-item[rel=active] {
+  position: absolute;
+  left: calc(50% - 240px);
+  top: calc(50% - 180px);
+  transform: scale(1);
+  z-index: 10;
+}
+.my-slider .slider-content .slider-item[rel=prev] {
+  transform: scale(0.5);
+  position: absolute;
+  left: 2%;
+}
+.my-slider .slider-content .slider-item[rel=next] {
+  transform: scale(0.5);
+  position: absolute;
+  left: 58%;
+}
+.my-slider .slider-content .slider-item {
+  transform: scale(0.5);
+  position: absolute;
+  left: -4000%;
+}
+.my-slider #slider-indicators {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 100%;
+  width: 100%;
+}
+.my-slider #slider-indicators .slider-indicator {
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background: black;
+  opacity: 0.5;
+}
+.my-slider #slider-indicators .slider-indicator[rel=active] {
+  opacity: 1;
+}
+.my-slider #slider-indicators .slider-indicator:hover {
+  opacity: 0.8;
+}
+
+/*# sourceMappingURL=style.css.map */
