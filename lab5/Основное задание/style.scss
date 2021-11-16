@@ -1,3 +1,7 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
 .my-slider {
   position: relative;
   text-align: center;
@@ -68,6 +72,8 @@
 #tabs-area {
   position: relative;
   margin-top: 90px; //optional
+  margin-bottom: 20px;
+  width: 100%;
   #tabs {
     display: flex;
     .tab-button {
@@ -103,6 +109,49 @@
     img {
       margin-top: 15px;
       max-width: 100%;
+    }
+  }
+}
+#accordion-area {
+  position: relative;
+  margin-top: 55%; // optional
+  margin-left: auto;
+  margin-right: auto;
+  .menu-title {
+    position: relative;
+    background: lightcoral;
+    display: flex;
+    margin-top: 5px;
+    margin-left: 15px;
+    width: 320px;
+    height: 70px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 18px;
+    border-radius: 60px 60px 60px 60px / 80% 80%;
+    span {
+      margin: auto;
+    }
+  }
+  .menu-content {
+    position: relative;
+    left: 8px;
+    display: flex;
+    flex-direction: column;
+    background: wheat;
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+    transition: all 0s;
+    max-height: 0;
+    overflow: hidden;
+    a {
+      margin-top: 5px;
+      color: brown;
+      text-decoration: none;
+      font-size: 18px;
     }
   }
 }
