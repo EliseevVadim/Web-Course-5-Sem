@@ -71,8 +71,7 @@
   }
   #tabs-area {
     position: relative;
-    margin-top: 90px; //optional
-    margin-bottom: 20px;
+    margin-top: 80px; //optional
     width: 100%;
     #tabs {
       display: flex;
@@ -92,6 +91,7 @@
     .tab-content {
       display: none;
       background-color: #73a473;
+      border-radius: 0 5px 5px 5px;
       position: absolute;
       top: 30px;
       padding: 50px 30px;
@@ -251,6 +251,75 @@
       visibility: visible;
       opacity: 1;
       position: fixed;
+    }
+  }
+  #validation-form-area {
+    position: relative;
+    margin-top: 20px;
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h1 {
+        color: red;
+        font-size: 24px;
+      }
+      .marked-field {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        input {
+          margin-top: 20px;
+          border-radius: 30px;
+          text-indent: 5px;
+        }
+        input:invalid {
+          width: 250px;
+          height: 30px;
+          font-size: 18px;
+          border: 4px solid #7c0e0e;
+          outline: none;
+        }
+        input:valid {
+          width: 250px;
+          height: 30px;
+          font-size: 18px;
+          border: 4px solid #1db61d;
+          outline: none;
+        }
+        input:invalid~.error-message {
+          color: red;
+        }
+        input:valid~.error-message {
+          display: none;
+        }
+      }
+    }
+    button {
+      width: 250px;
+      height: 35px;
+      margin-top: 20px;
+      border-radius: 30px;
+      color: white;
+      font-size: 18px;
+      font-weight: bolder;
+      outline: none;
+    }
+    form:valid {
+      button {
+        cursor: pointer;
+        background: darkgreen;
+        pointer-events: auto;
+      }
+    }
+    form:invalid {
+      button {
+        background-color: rgba(239, 239, 239, 0.3);
+        color: rgba(16, 16, 16, 0.3);
+        border-color: rgba(118, 118, 118, 0.3);
+        pointer-events: none;
+        cursor: none;
+      }
     }
   }
 }

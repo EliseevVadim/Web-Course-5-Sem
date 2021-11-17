@@ -254,6 +254,26 @@
                 </div>
             </div>
         </div>
+
+
+        <div id="validation-form-area">
+            <form action="#" id="validating-form" onsubmit="alert('Валидация прошла успешно!')">
+                <h1>Форма с валидацией введенных полей</h1>
+                <div class="marked-field">
+                    <input type="email" placeholder="Введите email..." required>
+                    <span class="error-message">Введенный email некорректен</span>
+                </div>
+                <div class="marked-field">
+                    <input type="text" placeholder="Введите пароль..."
+                           pattern="(?=^.{8,}$)(?=.*\d)(?=.*[A-Z])(?=.*[a-z])((?=.*\W)|(?=.*_+)).*"
+                           required>
+                    <span class="error-message">Вводимый пароль должен удовлетворять следующим требованиям:
+                        быть не короче 8 символов, содержать в себе хотя бы одну цифру,
+                        строчную и заглавную латинские буквы, спецсимвол (_ . , ? ! и т. д.)</span>
+                </div>
+                <button type="submit">Подтвердить</button>
+            </form>
+        </div>
     </div>
     <script src="elements/slider.js"></script>
     <script src="elements/tabs.js"></script>

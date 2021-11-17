@@ -70,8 +70,7 @@
 }
 .container #tabs-area {
   position: relative;
-  margin-top: 90px;
-  margin-bottom: 20px;
+  margin-top: 80px;
   width: 100%;
 }
 .container #tabs-area #tabs {
@@ -92,6 +91,7 @@
 .container #tabs-area .tab-content {
   display: none;
   background-color: #73a473;
+  border-radius: 0 5px 5px 5px;
   position: absolute;
   top: 30px;
   padding: 50px 30px;
@@ -251,6 +251,71 @@
   visibility: visible;
   opacity: 1;
   position: fixed;
+}
+.container #validation-form-area {
+  position: relative;
+  margin-top: 20px;
+}
+.container #validation-form-area form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container #validation-form-area form h1 {
+  color: red;
+  font-size: 24px;
+}
+.container #validation-form-area form .marked-field {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+.container #validation-form-area form .marked-field input {
+  margin-top: 20px;
+  border-radius: 30px;
+  text-indent: 5px;
+}
+.container #validation-form-area form .marked-field input:invalid {
+  width: 250px;
+  height: 30px;
+  font-size: 18px;
+  border: 4px solid #7c0e0e;
+  outline: none;
+}
+.container #validation-form-area form .marked-field input:valid {
+  width: 250px;
+  height: 30px;
+  font-size: 18px;
+  border: 4px solid #1db61d;
+  outline: none;
+}
+.container #validation-form-area form .marked-field input:invalid ~ .error-message {
+  color: red;
+}
+.container #validation-form-area form .marked-field input:valid ~ .error-message {
+  display: none;
+}
+.container #validation-form-area button {
+  width: 250px;
+  height: 35px;
+  margin-top: 20px;
+  border-radius: 30px;
+  color: white;
+  font-size: 18px;
+  font-weight: bolder;
+  outline: none;
+}
+.container #validation-form-area form:valid button {
+  cursor: pointer;
+  background: darkgreen;
+  pointer-events: auto;
+}
+.container #validation-form-area form:invalid button {
+  background-color: rgba(239, 239, 239, 0.3);
+  color: rgba(16, 16, 16, 0.3);
+  border-color: rgba(118, 118, 118, 0.3);
+  pointer-events: none;
+  cursor: none;
 }
 
 /*# sourceMappingURL=style.css.map */
