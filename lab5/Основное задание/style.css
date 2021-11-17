@@ -1,9 +1,9 @@
 .container {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 }
-
-.my-slider {
+.container .my-slider {
   position: relative;
   text-align: center;
   margin: auto;
@@ -13,47 +13,47 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.my-slider #left-arrow svg, .my-slider #right-arrow svg {
+.container .my-slider #left-arrow svg, .container .my-slider #right-arrow svg {
   position: absolute;
   top: 50%;
   cursor: pointer;
 }
-.my-slider .slider-content {
+.container .my-slider .slider-content {
   width: 80%;
   display: flex;
   list-style-type: none;
   overflow: hidden;
 }
-.my-slider .slider-content .slider-item[rel=active] {
+.container .my-slider .slider-content .slider-item[rel=active] {
   position: absolute;
   left: calc(50% - 240px);
   top: calc(50% - 180px);
   transform: scale(1);
   z-index: 10;
 }
-.my-slider .slider-content .slider-item[rel=prev] {
+.container .my-slider .slider-content .slider-item[rel=prev] {
   transform: scale(0.5);
   position: absolute;
   left: 2%;
 }
-.my-slider .slider-content .slider-item[rel=next] {
+.container .my-slider .slider-content .slider-item[rel=next] {
   transform: scale(0.5);
   position: absolute;
   left: 58%;
 }
-.my-slider .slider-content .slider-item {
+.container .my-slider .slider-content .slider-item {
   transform: scale(0.5);
   position: absolute;
   left: -4000%;
 }
-.my-slider #slider-indicators {
+.container .my-slider #slider-indicators {
   position: absolute;
   display: flex;
   justify-content: center;
   top: 100%;
   width: 100%;
 }
-.my-slider #slider-indicators .slider-indicator {
+.container .my-slider #slider-indicators .slider-indicator {
   cursor: pointer;
   margin: 5px;
   border-radius: 50%;
@@ -62,23 +62,22 @@
   background: black;
   opacity: 0.5;
 }
-.my-slider #slider-indicators .slider-indicator[rel=active] {
+.container .my-slider #slider-indicators .slider-indicator[rel=active] {
   opacity: 1;
 }
-.my-slider #slider-indicators .slider-indicator:hover {
+.container .my-slider #slider-indicators .slider-indicator:hover {
   opacity: 0.8;
 }
-
-#tabs-area {
+.container #tabs-area {
   position: relative;
   margin-top: 90px;
   margin-bottom: 20px;
   width: 100%;
 }
-#tabs-area #tabs {
+.container #tabs-area #tabs {
   display: flex;
 }
-#tabs-area #tabs .tab-button {
+.container #tabs-area #tabs .tab-button {
   width: 90px;
   height: 50px;
   border-radius: 100px 100px 100px 100px/100% 100%;
@@ -86,11 +85,11 @@
   font-size: 16px;
   font-weight: bold;
 }
-#tabs-area #tabs .tab-button.active {
+.container #tabs-area #tabs .tab-button.active {
   color: white;
   background: #73a473;
 }
-#tabs-area .tab-content {
+.container #tabs-area .tab-content {
   display: none;
   background-color: #73a473;
   position: absolute;
@@ -100,26 +99,25 @@
   min-width: 100%;
   max-width: 100%;
 }
-#tabs-area .tab-content.active {
+.container #tabs-area .tab-content.active {
   display: flex;
   justify-content: center;
 }
-#tabs-area .tab-content.active p {
+.container #tabs-area .tab-content.active p {
   margin-right: 25px;
   background: white;
 }
-#tabs-area .tab-content.active img {
+.container #tabs-area .tab-content.active img {
   margin-top: 15px;
   max-width: 100%;
 }
-
-#accordion-area {
+.container #accordion-area {
   position: relative;
   margin-top: 55%;
   margin-left: auto;
   margin-right: auto;
 }
-#accordion-area .menu-title {
+.container #accordion-area .menu-title {
   position: relative;
   background: lightcoral;
   display: flex;
@@ -134,10 +132,10 @@
   font-size: 18px;
   border-radius: 60px 60px 60px 60px/80% 80%;
 }
-#accordion-area .menu-title span {
+.container #accordion-area .menu-title span {
   margin: auto;
 }
-#accordion-area .menu-content {
+.container #accordion-area .menu-content {
   position: relative;
   left: 8px;
   display: flex;
@@ -150,11 +148,109 @@
   max-height: 0;
   overflow: hidden;
 }
-#accordion-area .menu-content a {
+.container #accordion-area .menu-content a {
   margin-top: 5px;
   color: brown;
   text-decoration: none;
   font-size: 18px;
+}
+.container #modal-window-container {
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+}
+.container #modal-window-container #show-button {
+  margin: 0 auto;
+  background: blue;
+  color: white;
+  width: 200px;
+  height: 70px;
+  font-size: 20px;
+  border: 1px solid green;
+  border-radius: 60px 60px 60px 60px/80% 80%;
+  cursor: pointer;
+}
+.container #modal-window-container #modal-area {
+  position: absolute;
+  visibility: hidden;
+  text-align: center;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+.container #modal-window-container #modal-area #modal-window {
+  position: relative;
+  top: 15%;
+  width: 40%;
+  height: 60%;
+  background: white;
+  box-shadow: 0 5px 15px black;
+}
+.container #modal-window-container #modal-area #modal-window header {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 8%;
+  background: brown;
+}
+.container #modal-window-container #modal-area #modal-window header .title {
+  position: relative;
+  color: white;
+  margin: 0 auto;
+  font-size: 24px;
+  top: calc(50% - 0.5em);
+}
+.container #modal-window-container #modal-area #modal-window header #close-button {
+  width: 32px;
+  height: 100%;
+  text-align: center;
+}
+.container #modal-window-container #modal-area #modal-window header #close-button svg {
+  position: relative;
+  top: calc(50% - 15px);
+  color: white;
+  cursor: pointer;
+  transition: color 0.4s;
+}
+.container #modal-window-container #modal-area #modal-window header #close-button svg:hover {
+  color: gray;
+}
+.container #modal-window-container #modal-area #modal-window main {
+  margin: 0 auto;
+  position: relative;
+  top: 15%;
+  width: 80%;
+  max-height: 80%;
+  background: lightseagreen;
+  border-radius: 3px;
+  overflow-y: scroll;
+}
+.container #modal-window-container #modal-area #modal-window main h1 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.container #modal-window-container #modal-area #modal-window main h2 {
+  color: firebrick;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.container #modal-window-container #modal-area #modal-window main img {
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.container #modal-window-container #modal-area[rel=active] {
+  visibility: visible;
+  opacity: 1;
+  position: fixed;
 }
 
 /*# sourceMappingURL=style.css.map */
