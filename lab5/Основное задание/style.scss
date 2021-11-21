@@ -347,4 +347,143 @@
       text-align: center;
     }
   }
+  #hamburger-menu-area {
+    position: relative;
+    margin-top: 30px;
+    background: darkblue;
+    width: 100%;
+    height: 70px;
+    #hamburger-menu {
+      position: relative;
+      top: calc(50% - 40px);
+      #hamburger-icon {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        display: none;
+        color: white;
+        top: 8px;
+      }
+      ul {
+        display: flex;
+        list-style: none;
+        li {
+          display: block;
+          text-align: center;
+          width: 150px;
+          height: 50px;
+          background: lightgreen;
+          font-size: 24px;
+          text-transform: uppercase;
+          cursor: pointer;
+          a {
+            position: relative;
+            top: calc(50% - 0.5em);
+            text-decoration: none;
+            color: white;
+          }
+        }
+        li:hover {
+          background: darkgreen;
+        }
+        li.active {
+          background: darkgreen;
+        }
+        li.hasChildren:after {
+          position: relative;
+          content: '+';
+          color: red;
+          font-weight: bold;
+          font-size: 24px;
+          top: calc(50% - 0.5em);
+        }
+        li.hasChildren {
+          ul {
+            display: none;
+            list-style: none;
+            position: relative;
+            left: -40px;
+            top: 20px;
+          }
+        }
+        li.hasChildren:hover {
+          ul {
+            display: block;
+          }
+        }
+        li.hasChildren:hover:after, li.subitem-with-children:hover:after {
+          display: none;
+        }
+        li.subitem-with-children {
+          ul {
+            display: none !important;
+          }
+        }
+        li.subitem-with-children:hover {
+          ul {
+            display: block !important;
+            position: relative;
+            left: 109px;
+            top: -27px;
+          }
+        }
+        li.subitem-with-children:after {
+          position: relative;
+          content: '>';
+          color: red;
+          font-weight: bold;
+          font-size: 24px;
+          top: calc(50% - 0.5em);
+        }
+      }
+    }
+    #hamburger-menu[rel="collapsed"] {
+      #hamburger-icon {
+        display: block;
+      }
+      ul {
+        display: none;
+      }
+    }
+    #hamburger-menu[rel="expanded"] {
+      height: fit-content;
+      background: darkblue;
+      display: flex;
+      flex-direction: column;
+      #hamburger-icon {
+        display: block;
+      }
+      ul {
+        position: relative;
+        left: 60px;
+        display: flex;
+        flex-direction: column;
+        li {
+          position: relative;
+        }
+        li.hasChildren {
+          ul {
+            display: none;
+          }
+        }
+        li.hasChildren:hover {
+          ul {
+            display: none;
+          }
+        }
+        li.hasChildren:after {
+          content: '';
+        }
+        li.subitem-with-children:hover {
+          ul {
+            display: none !important;
+          }
+        }
+        li.subitem-with-children:after {
+          content: '';
+        }
+      }
+    }
+  }
 }

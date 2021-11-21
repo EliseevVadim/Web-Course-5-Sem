@@ -342,5 +342,128 @@
 .container #scale-area h1 {
   text-align: center;
 }
+.container #hamburger-menu-area {
+  position: relative;
+  margin-top: 30px;
+  background: darkblue;
+  width: 100%;
+  height: 70px;
+}
+.container #hamburger-menu-area #hamburger-menu {
+  position: relative;
+  top: calc(50% - 40px);
+}
+.container #hamburger-menu-area #hamburger-menu #hamburger-icon {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  display: none;
+  color: white;
+  top: 8px;
+}
+.container #hamburger-menu-area #hamburger-menu ul {
+  display: flex;
+  list-style: none;
+}
+.container #hamburger-menu-area #hamburger-menu ul li {
+  display: block;
+  text-align: center;
+  width: 150px;
+  height: 50px;
+  background: lightgreen;
+  font-size: 24px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.container #hamburger-menu-area #hamburger-menu ul li a {
+  position: relative;
+  top: calc(50% - 0.5em);
+  text-decoration: none;
+  color: white;
+}
+.container #hamburger-menu-area #hamburger-menu ul li:hover {
+  background: darkgreen;
+}
+.container #hamburger-menu-area #hamburger-menu ul li.active {
+  background: darkgreen;
+}
+.container #hamburger-menu-area #hamburger-menu ul li.hasChildren:after {
+  position: relative;
+  content: "+";
+  color: red;
+  font-weight: bold;
+  font-size: 24px;
+  top: calc(50% - 0.5em);
+}
+.container #hamburger-menu-area #hamburger-menu ul li.hasChildren ul {
+  display: none;
+  list-style: none;
+  position: relative;
+  left: -40px;
+  top: 20px;
+}
+.container #hamburger-menu-area #hamburger-menu ul li.hasChildren:hover ul {
+  display: block;
+}
+.container #hamburger-menu-area #hamburger-menu ul li.hasChildren:hover:after, .container #hamburger-menu-area #hamburger-menu ul li.subitem-with-children:hover:after {
+  display: none;
+}
+.container #hamburger-menu-area #hamburger-menu ul li.subitem-with-children ul {
+  display: none !important;
+}
+.container #hamburger-menu-area #hamburger-menu ul li.subitem-with-children:hover ul {
+  display: block !important;
+  position: relative;
+  left: 109px;
+  top: -27px;
+}
+.container #hamburger-menu-area #hamburger-menu ul li.subitem-with-children:after {
+  position: relative;
+  content: ">";
+  color: red;
+  font-weight: bold;
+  font-size: 24px;
+  top: calc(50% - 0.5em);
+}
+.container #hamburger-menu-area #hamburger-menu[rel=collapsed] #hamburger-icon {
+  display: block;
+}
+.container #hamburger-menu-area #hamburger-menu[rel=collapsed] ul {
+  display: none;
+}
+.container #hamburger-menu-area #hamburger-menu[rel=expanded] {
+  height: fit-content;
+  background: darkblue;
+  display: flex;
+  flex-direction: column;
+}
+.container #hamburger-menu-area #hamburger-menu[rel=expanded] #hamburger-icon {
+  display: block;
+}
+.container #hamburger-menu-area #hamburger-menu[rel=expanded] ul {
+  position: relative;
+  left: 60px;
+  display: flex;
+  flex-direction: column;
+}
+.container #hamburger-menu-area #hamburger-menu[rel=expanded] ul li {
+  position: relative;
+}
+.container #hamburger-menu-area #hamburger-menu[rel=expanded] ul li.hasChildren ul {
+  display: none;
+}
+.container #hamburger-menu-area #hamburger-menu[rel=expanded] ul li.hasChildren:hover ul {
+  display: none;
+}
+.container #hamburger-menu-area #hamburger-menu[rel=expanded] ul li.hasChildren:after {
+  content: "";
+}
+.container #hamburger-menu-area #hamburger-menu[rel=expanded] ul li.subitem-with-children:hover ul {
+  display: none !important;
+}
+.container #hamburger-menu-area #hamburger-menu[rel=expanded] ul li.subitem-with-children:after {
+  content: "";
+}
 
 /*# sourceMappingURL=style.css.map */
