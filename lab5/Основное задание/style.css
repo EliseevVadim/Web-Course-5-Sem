@@ -465,5 +465,53 @@
 .container #hamburger-menu-area #hamburger-menu[rel=expanded] ul li.subitem-with-children:after {
   content: "";
 }
+.container #ranger-area {
+  position: relative;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+.container #ranger-area #ranger {
+  display: flex;
+}
+.container #ranger-area #ranger #left-value, .container #ranger-area #ranger #right-value {
+  font-size: 24px;
+  margin: 0.5em 10px;
+}
+.container #ranger-area #ranger #scroll-field {
+  position: relative;
+  width: 320px;
+  height: 40px;
+  background: linear-gradient(to right, green 0px, brown 0px);
+  border-radius: 60px 60px 60px 60px/80% 80%;
+}
+.container #ranger-area #ranger #scroll-field #start-border-mark, .container #ranger-area #ranger #scroll-field #end-border-mark {
+  display: block;
+  position: absolute;
+  top: -90%;
+  left: 4%;
+  z-index: -1;
+}
+.container #ranger-area #ranger #scroll-field #start-border-mark .mark, .container #ranger-area #ranger #scroll-field #end-border-mark .mark {
+  width: 5px;
+  height: 25px;
+  background: saddlebrown;
+}
+.container #ranger-area #ranger #scroll-field #end-border-mark {
+  left: 96%;
+}
+.container #ranger-area #ranger #scroll-field #first-bar, .container #ranger-area #ranger #scroll-field #second-bar {
+  cursor: pointer;
+  background: red;
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  width: 10px;
+  height: 50px;
+  border-radius: 30px;
+}
+.container #ranger-area #ranger #scroll-field #second-bar {
+  left: 315px;
+}
 
 /*# sourceMappingURL=style.css.map */
