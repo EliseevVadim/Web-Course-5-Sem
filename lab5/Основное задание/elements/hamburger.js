@@ -19,8 +19,8 @@ function updateHamburger (query) {
     }
 }
 
-function returnHamburger(query) {
-    if(query.matches) {
+function turnBackHamburger(query) {
+    if (query.matches) {
         hamburger.removeAttribute('rel');
         itemContainer.innerHTML = initialHtml;
     }
@@ -40,5 +40,5 @@ function expandHamburger() {
 collapseQuery.addListener(updateHamburger);
 updateHamburger(collapseQuery);
 
-expandQuery.addListener(returnHamburger);
-returnHamburger(expandQuery);
+expandQuery.addListener(turnBackHamburger);
+turnBackHamburger(expandQuery);
