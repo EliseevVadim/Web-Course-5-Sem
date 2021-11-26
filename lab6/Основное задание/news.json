@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "title": "title1",
+      "body": "news body 1"
+    },
+    {
+      "title": "title2",
+      "body": "news body 2"
+    },
+    {
+      "title": "title3",
+      "body": "news body 3"
+    },
+    {
+      "title": "title4",
+      "body": "news body 4"
+    },
+    {
+      "title": "title5",
+      "body": "news body 5"
+    },
+    {
+      "title": "title6",
+      "body": "news body 6"
+    },
+    {
+      "title": "title7",
+      "body": "news body 7"
+    },
+    {
+      "title": "title8",
+      "body": "news body 8"
+    },
+    {
+      "title": "title9",
+      "body": "news body 9"
+    }
+  ]
+}
