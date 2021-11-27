@@ -21,12 +21,14 @@ button.onclick = function () {
                             resultsList.innerHTML += `<li>${data[i]}</li>`;
                         }
                         $('#load-all').css('display', 'block');
-                    } else {
+                    }
+                    else {
                         for (let i = 0; i < data.length; i++) {
                             resultsList.innerHTML += `<li>${data[i]}</li>`;
                         }
                     }
-                } else {
+                }
+                else {
                     alert('Ничего не найдено')
                 }
             })
