@@ -18,6 +18,13 @@ let currentButton;
 let prevButton;
 let nextButton;
 
+let searchButton = document.getElementById('search-button');
+let searchField = document.getElementById('search-field');
+let resultList;
+
+let searchUsed = false;
+
+searchButton.onclick = searchNews;
 closeButton.onclick = closeNewsWindow;
 
 window.onload = function () {
@@ -28,46 +35,39 @@ window.onload = function () {
         .then((json)=> {
             newsList = json.data;
             pageCount = Math.ceil(newsList.length / newsPerPage);
-            buttonsArea.innerHTML = '<button onclick="loadPrevPage()">Prev</button>';
-            for (let i = 1; i <= pageCount; i++) {
-                buttonsArea.innerHTML += `<button value="${i}" onclick="loadPage(value)">${i}</button>`;
-            }
-            buttonsArea.innerHTML += '<button style="margin: 0" onclick="loadNextPage()">Next</button>';
+            drawButtonsForList(newsList);
             currentPage = 1;
-            navButtons = buttonsArea.children;
-            prevButton = navButtons[0];
-            nextButton = navButtons[navButtons.length - 1];
-            currentButton = navButtons[currentPage];
-            loadNewsForCurrentPage();
+            prepareButtons();
+            loadNewsForCurrentPage(newsList);
         })
 }
 
-function loadNewsForCurrentPage() {
+function loadNewsForCurrentPage(inputList) {
     newsArea.innerHTML = '';
     redrawButtons();
-    if (currentPage * newsPerPage <= newsList.length) {
+    if (currentPage * newsPerPage <= inputList.length) {
         for (let i = (currentPage - 1) * newsPerPage; i < currentPage * newsPerPage; i++) {
             newsArea.innerHTML += `
                 <div class="news-card">
                     <div class="news-title">
-                        ${newsList[i].title}
+                        ${inputList[i].title}
                     </div>
-                    <img src="${newsList[i].image}" alt="#">
-                    <p>${newsList[i].body.split(' ').slice(0, 50).join(' ')}...</p>
+                    <img src="${inputList[i].image}" alt="#">
+                    <p>${inputList[i].body.split(' ').slice(0, 50).join(' ')}...</p>
                     <a href="javascript://" rel = ${i} onclick="showNewsWindow(rel)">More info</a>
                 </div>
             `
         }
     }
     else {
-        for (let i = (currentPage - 1) * newsPerPage; i < newsList.length; i++) {
+        for (let i = (currentPage - 1) * newsPerPage; i < inputList.length; i++) {
             newsArea.innerHTML += `
                 <div class="news-card">
                     <div class="news-title">
-                        ${newsList[i].title}
+                        ${inputList[i].title}
                     </div>
-                    <img src="${newsList[i].image}" alt="#">
-                    <p>${newsList[i].body.split(' ').slice(0, 50).join(' ')}...</p>
+                    <img src="${inputList[i].image}" alt="#">
+                    <p>${inputList[i].body.split(' ').slice(0, 50).join(' ')}...</p>
                     <a href="javascript://" rel = ${i} onclick="showNewsWindow(rel)">More info</a>
                 </div>
             `
@@ -78,27 +78,34 @@ function loadNewsForCurrentPage() {
 function loadPage(value) {
     currentPage = parseInt(value);
     navButtons[currentPage].classList.add('disabled-button');
-    loadNewsForCurrentPage();
+    getNews();
     window.scrollTo(0, 0);
 }
 
 function loadPrevPage() {
     currentPage--;
-    loadNewsForCurrentPage();
+    getNews();
     window.scrollTo(0, 0);
 }
 
 function loadNextPage() {
     currentPage++;
-    loadNewsForCurrentPage();
+    getNews();
     window.scrollTo(0, 0);
 }
 
 function showNewsWindow (i) {
     i = parseInt(i);
-    content.title.textContent = newsList[i].title;
-    content.image.setAttribute('src', newsList[i].image);
-    content.text.textContent = newsList[i].body;
+    if (searchUsed) {
+        content.title.textContent = resultList[i].title;
+        content.image.setAttribute('src', resultList[i].image);
+        content.text.textContent = resultList[i].body;
+    }
+    else {
+        content.title.textContent = newsList[i].title;
+        content.image.setAttribute('src', newsList[i].image);
+        content.text.textContent = newsList[i].body;
+    }
     modalArea.setAttribute('rel', 'active');
     modalContent.scrollTo(0, 0);
 }
@@ -119,4 +126,42 @@ function redrawButtons() {
     if (currentPage === navButtons.length - 2) {
         nextButton.classList.add('disabled-button');
     }
+}
+
+function searchNews() {
+    resultList = newsList.filter(function (item) {
+        return item.body.toLowerCase().includes(searchField.value.toString().toLowerCase());
+    })
+    currentPage = 1;
+    pageCount = Math.ceil(resultList.length / newsPerPage);
+    drawButtonsForList(resultList);
+    prepareButtons();
+    loadNewsForCurrentPage(resultList);
+    window.scrollTo(0, 0);
+    searchUsed = true;
+}
+
+function drawButtonsForList(inputList) {
+    buttonsArea.innerHTML = '';
+    buttonsArea.innerHTML = '<button onclick="loadPrevPage()">Prev</button>';
+    for (let i = 1; i <= pageCount; i++) {
+        buttonsArea.innerHTML += `<button value="${i}" onclick="loadPage(value)">${i}</button>`;
+    }
+    buttonsArea.innerHTML += '<button style="margin: 0" onclick="loadNextPage()">Next</button>';
+}
+
+function getNews() {
+    if (searchUsed) {
+        loadNewsForCurrentPage(resultList);
+    }
+    else {
+        loadNewsForCurrentPage(newsList);
+    }
+}
+
+function prepareButtons() {
+    navButtons = buttonsArea.children;
+    prevButton = navButtons[0];
+    nextButton = navButtons[navButtons.length - 1];
+    currentButton = navButtons[currentPage];
 }

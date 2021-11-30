@@ -157,6 +157,32 @@ body {
   opacity: 1;
   position: fixed;
 }
+.container footer #search-area {
+  display: flex;
+  margin: 25px;
+}
+.container footer #search-area input {
+  width: 250px;
+  height: 35px;
+  outline-color: lightskyblue;
+  font-size: 16px;
+  border: none;
+  text-indent: 7px;
+}
+.container footer #search-area button {
+  margin-left: 5px;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  background: brown;
+}
+.container footer #search-area button svg {
+  color: white;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  top: calc(50% - 10px);
+}
 .container footer nav {
   display: flex;
   margin-left: 25px;
