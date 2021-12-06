@@ -201,10 +201,10 @@
         <div id="menu">
             <ul>
                 <li class="menu-item">
-                    <a href="#">Калькулятор</a>
+                    <a href="calculator.php">Калькулятор</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#">Форма загрузки файлов на сервер</a>
+                    <a href="uploadForm.php">Форма загрузки файлов на сервер</a>
                 </li>
             </ul>
         </div>
