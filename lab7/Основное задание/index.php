@@ -206,6 +206,9 @@
                 <li class="menu-item">
                     <a href="uploadForm.php">Форма загрузки файлов на сервер</a>
                 </li>
+                <li class="menu-item">
+                    <a href="../Дополнительное%20задание/index.php">Галерея изображений</a>
+                </li>
             </ul>
         </div>
     </section>
