@@ -1,0 +1,37 @@
+body {
+  background: lightgoldenrodyellow;
+}
+
+main h1 {
+  text-align: center;
+  color: darkgreen;
+}
+main table {
+  border: 1px solid #eee;
+  table-layout: fixed;
+  width: 100%;
+  margin-bottom: 50px;
+}
+main table th {
+  font-weight: bold;
+  padding: 5px;
+  background: #efefef;
+  border: 1px solid #dddddd;
+}
+main table td {
+  padding: 5px 10px;
+  border: 1px solid #eee;
+  text-align: left;
+}
+main table td button {
+  display: block;
+  margin: 0 auto;
+}
+main table tbody tr:nth-child(odd) {
+  background: #fff;
+}
+main table tbody tr:nth-child(even) {
+  background: #F7F7F7;
+}
+
+/*# sourceMappingURL=tablesPageStyle.css.map */

@@ -1,0 +1,119 @@
+body {
+    background: lightskyblue;
+    margin: 0;
+}
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: darkblue;
+    width: 100%;
+    #greetings-message {
+        width: 100%;
+        h1 {
+            text-align: center;
+            color: red;
+        }
+    }
+    #user-actions {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        .action-wrapper {
+            margin: 15px 0;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            .user-option {
+                background: #5bce5b;
+                height: 50px;
+                width: fit-content;
+                padding: 0 10px;
+                display: table-cell;
+                text-align: center;
+                cursor: pointer;
+                a {
+                    text-decoration: none;
+                    color: #800d0d;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 20px;
+                    position: relative;
+                    top: calc(50% - 0.5em);
+                    svg {
+                        color: black;
+                        position: relative;
+                        top: calc(-50% + 20px);
+                        left: calc(50% - 16px);
+                    }
+                }
+            }
+        }
+    }
+    #account-actions {
+        width: 50%;
+        margin: 15px 0;
+        display: flex;
+        justify-content: end;
+        .account-option {
+            margin: 0 10px;
+            background: #5bce5b;
+            height: 50px;
+            width: fit-content;
+            box-sizing: border-box;
+            padding: 0 10px;
+            display: table-cell;
+            text-align: center;
+            cursor: pointer;
+            a {
+                text-decoration: none;
+                color: darkblue;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 20px;
+                position: relative;
+                top: calc(50% - 0.5em);
+            }
+        }
+    }
+}
+main {
+    margin-top: 50px;
+    h1 {
+        text-align: center;
+    }
+    #gallery {
+        text-align: center;
+        background-color: wheat;
+        width: 1100px;
+        min-height: 250px;
+        padding: 30px 20px;
+        position: relative;
+        left: calc(50% - 550px);
+        border-radius: 8px;
+        box-shadow:  0 20px 25px rgba(0,0,0,0.5);
+        .images-area {
+            margin: 20px auto;
+            display: flex;
+            justify-content: left;
+            flex-wrap: wrap;
+            width: inherit;
+            figure {
+                margin-top: 10px;
+                width: 25%;
+                height: auto;
+                figcaption {
+                    font-size: 18px;
+                    font-style: italic;
+                    font-weight: bolder;
+                    span {
+                        color: red;
+                        text-decoration: underline;
+                        font-style: normal;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

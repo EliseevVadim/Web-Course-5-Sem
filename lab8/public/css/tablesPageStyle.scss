@@ -1,0 +1,38 @@
+body {
+    background: lightgoldenrodyellow;
+}
+main {
+    h1 {
+        text-align: center;
+        color: darkgreen;
+    }
+    table {
+        border: 1px solid #eee;
+        table-layout: fixed;
+        width: 100%;
+        margin-bottom: 50px;
+        th {
+            font-weight: bold;
+            padding: 5px;
+            background: #efefef;
+            border: 1px solid #dddddd;
+        }
+        td {
+            padding: 5px 10px;
+            border: 1px solid #eee;
+            text-align: left;
+            button {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        tbody {
+            tr:nth-child(odd) {
+                background: #fff;
+            }
+            tr:nth-child(even) {
+                background: #F7F7F7;
+            }
+        }
+    }
+}

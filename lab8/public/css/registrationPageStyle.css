@@ -1,0 +1,105 @@
+body {
+  background: #6f6fc5;
+}
+
+#registration-area {
+  width: 40%;
+  margin-top: 25px;
+  top: 50%;
+  left: 50%;
+  background: #96e796;
+  border-radius: 10px;
+  min-width: 450px;
+  position: absolute;
+  min-height: 100px;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.5);
+  transform: translate(-50%, -55%);
+}
+#registration-area form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#registration-area form #errors-list {
+  background: lightcoral;
+  width: 100%;
+  color: whitesmoke;
+  font-size: 16px;
+}
+#registration-area form h1 {
+  font-weight: 900;
+  font-size: 40px;
+  color: darkgreen;
+}
+#registration-area form input {
+  width: 300px;
+  height: 45px;
+  box-sizing: border-box;
+  margin: 10px 0;
+  font-size: 20px;
+  text-indent: 7px;
+  border-radius: 15px;
+  outline-color: transparent;
+}
+#registration-area form input:invalid {
+  border: 5px solid red;
+}
+#registration-area form input:valid {
+  border: 3px solid green;
+}
+#registration-area form input:focus {
+  border: 3px solid lightseagreen;
+}
+#registration-area form #password-area {
+  display: flex;
+  justify-content: center;
+}
+#registration-area form #password-area input {
+  position: relative;
+  left: 17px;
+  height: 45px;
+  padding-right: 50px;
+  box-sizing: border-box;
+}
+#registration-area form #password-area #preview-password {
+  position: relative;
+  left: -30px;
+  cursor: pointer;
+}
+#registration-area form #password-area #preview-password svg {
+  position: relative;
+  top: calc(50% - 16px);
+}
+#registration-area form strong {
+  margin-top: 15px;
+  font-size: 24px;
+  color: blue;
+}
+#registration-area form select {
+  margin: 10px 0;
+  width: 220px;
+  height: 45px;
+  font-size: 20px;
+  text-align: center;
+  text-indent: 7px;
+  border: 3px solid blue;
+  outline: none;
+  font-weight: bolder;
+}
+#registration-area form button {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  width: 220px;
+  height: 40px;
+  border-radius: 15px;
+  font-size: 20px;
+  background: green;
+  color: white;
+}
+#registration-area form #token {
+  display: none;
+  width: 500px;
+}
+
+/*# sourceMappingURL=registrationPageStyle.css.map */
